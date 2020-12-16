@@ -1,7 +1,5 @@
-<h2>List of Scientists</h2>
-<ul>
-    {{#each @model as |scientist| }}
-       <li>{{scientist}}</li>
-    {{/each}}
-</ul>
-{{outlet}}
+<h2>Scientists</h2>
+<PeopleList 
+    @title='List of Scientists'
+    @people={{@model}}
+/>
