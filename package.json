@@ -17,7 +17,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "create:route": "ember generate route"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
