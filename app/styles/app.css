@@ -1,1 +1,6 @@
+@import "root.css";
 @import "signup.css";
+
+body {
+  font-family: "Roboto", sans-serif, serif;
+}
