@@ -1,0 +1,13 @@
+<div class="form-field">
+    <label for={{@for}}>{{@label}} </label>
+    <Input
+        @id={{@id}}
+        @type={{@type}}
+        @value={{@value}}
+        @class='form-input'
+        {{on 'input' this.fieldUpdated}}
+    />
+    {{#if @showError}}
+    <p class='error'>{{if @errorMsg @errorMsg 'Field cannot be empty'}}</p>
+    {{/if}}
+</div>

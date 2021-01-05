@@ -1,11 +1,87 @@
-<div id="signup"> 
+<div id="signup">
     <form class="form">
         <h2 class="title">Account Details</h2>
-        <div class="form-field">
-            <label for='fname'>First Name: </label>
-            <input type="text" class="form-input"/>
-            <p class='error'>This Dj is so funky man!</p>
+        <FormField
+            @id='firstName' 
+            @label= 'First Name'
+            @for = 'fname'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.firstName}}
+            @showError = {{this.formErrors.firstName}}
+            @errorMsg = 'Field cannot be empty'
+        />
+        <FormField
+            @id='lastName' 
+            @label= 'Last Name'
+            @for = 'lname'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.lastName}}
+            @showError = {{this.formErrors.lastName}}
+            @errorMsg = 'Field cannot be empty'
+        />
+            <div class="form-field">
+            <label for='lname'>Last Name: </label>
+            <input type="text" class="form-input" name='lname'/>
+            <p class='error'>Field cannot be empty</p>
         </div>
+            <div class="form-field">
+                <label for='username'>Choose a username: </label>
+                <p class='error'>Field cannot be empty</p>
+            </div>
+         <FormField
+            @id='email' 
+            @label= 'Email'
+            @for = 'email'
+            @type = 'email'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.email}}
+            @showError = {{this.formErrors.email}}
+            @errorMsg = 'Email is not valid'
+            @validation = {{this.validateEmail}}
+        />
+            <div class="form-field">
+            <label for='phonenumber'>Phone Number: </label>
+            <input type="number" class="form-input" name='phonenumber'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+            <div class="form-field">
+            <label for='experience'>Experience (in Years): </label>
+            <input type="number" class="form-input" name='experience'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+            <div class="form-field">
+            <label for='companyname'>Company Name: </label>
+            <input type="text" class="form-input" name='companyname'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+            <div class="form-field">
+            <label for='designation'>Designation: </label>
+            <input type="text" class="form-input" name='designation'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+            <div class="form-field">
+            <label for='github'>Github: </label>
+            <input type="text" class="form-input" name='github'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+            <div class="form-field">
+            <label for='linkedin'>LinkedIn: </label>
+            <input type="text" class="form-input" name='linkedin'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+            <div class="form-field">
+            <label for='twitter'>Twitter: </label>
+            <input type="text" class="form-input" name='twitter'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+            <div class="form-field">
+            <label for='website'>Website: </label>
+            <input type="text" class="form-input" name='website'/>
+            <p class='error'>Field cannot be empty</p>
+        </div>
+        <button class="submit-btn">Submit</button>
     </form>
 </div>
 

@@ -18,6 +18,7 @@
 }
 
 #signup .form .form-field {
+  margin-bottom: 20px;
 }
 
 #signup .form .form-field label {
@@ -51,4 +52,16 @@
   color: #ff0000;
   line-height: 0;
   font-size: 12px;
+}
+#signup .form .submit-btn {
+  background-color: #43a047;
+  color: #fff;
+  border-color: #777;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
