@@ -21,15 +21,16 @@
             @showError = {{this.formErrors.lastName}}
             @errorMsg = 'Field cannot be empty'
         />
-            <div class="form-field">
-            <label for='lname'>Last Name: </label>
-            <input type="text" class="form-input" name='lname'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-                <label for='username'>Choose a username: </label>
-                <p class='error'>Field cannot be empty</p>
-            </div>
+        <FormField
+            @id='username' 
+            @label= 'Choose a username:'
+            @for = 'username'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.username}}
+            @showError = {{this.formErrors.username}}
+            @errorMsg = 'Field cannot be empty'
+        />
          <FormField
             @id='email' 
             @label= 'Email'
@@ -41,47 +42,91 @@
             @errorMsg = 'Email is not valid'
             @validation = {{this.validateEmail}}
         />
-            <div class="form-field">
-            <label for='phonenumber'>Phone Number: </label>
-            <input type="number" class="form-input" name='phonenumber'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-            <label for='experience'>Experience (in Years): </label>
-            <input type="number" class="form-input" name='experience'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-            <label for='companyname'>Company Name: </label>
-            <input type="text" class="form-input" name='companyname'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-            <label for='designation'>Designation: </label>
-            <input type="text" class="form-input" name='designation'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-            <label for='github'>Github: </label>
-            <input type="text" class="form-input" name='github'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-            <label for='linkedin'>LinkedIn: </label>
-            <input type="text" class="form-input" name='linkedin'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-            <label for='twitter'>Twitter: </label>
-            <input type="text" class="form-input" name='twitter'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-            <div class="form-field">
-            <label for='website'>Website: </label>
-            <input type="text" class="form-input" name='website'/>
-            <p class='error'>Field cannot be empty</p>
-        </div>
-        <button class="submit-btn">Submit</button>
+        <FormField
+            @id='phoneNumber' 
+            @label= 'Phone Number'
+            @for = 'phoneNumber'
+            @type = 'number'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.phoneNumber}}
+            @showError = {{this.formErrors.phoneNumber}}
+            @errorMsg = 'Field cannot be empty'
+        />
+        <FormField
+            @id='experience' 
+            @label= 'Experience'
+            @for = 'experience'
+            @type = 'number'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.experience}}
+            @showError = {{this.formErrors.experience}}
+            @errorMsg = 'Field cannot be empty'
+        />
+        <FormField
+            @id='companyName' 
+            @label= 'Company Name :'
+            @for = 'companyName'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.companyName}}
+            @showError = {{this.formErrors.companyName}}
+            @errorMsg = 'Field cannot be empty'
+        />
+         <FormField
+            @id='designation' 
+            @label= 'Designation :'
+            @for = 'designation'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.designation}}
+            @showError = {{this.formErrors.designation}}
+            @errorMsg = 'Field cannot be empty'
+        />
+        <FormField
+            @id='github' 
+            @label= 'Github :'
+            @for = 'github'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.github}}
+            @showError = {{this.formErrors.github}}
+            @errorMsg = 'Field cannot be empty'
+        />
+           <FormField
+            @id='linkedIn' 
+            @label= 'LinkedIn :'
+            @for = 'linkedIn'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.linkedIn}}
+            @showError = {{this.formErrors.linkedIn}}
+            @errorMsg = 'Field cannot be empty'
+        />
+        <FormField
+            @id='twitter' 
+            @label= 'Twitter :'
+            @for = 'twitter'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.twitter}}
+            @showError = {{this.formErrors.twitter}}
+            @errorMsg = 'Field cannot be empty'
+        />
+        <FormField
+            @id='website' 
+            @label= 'Website :'
+            @for = 'website'
+            @type = 'text'
+            @onChange = {{this.updateFormDataField}}
+            @value={{this.formData.website}}
+            @showError = {{this.formErrors.website}}
+            @errorMsg = 'Field cannot be empty'
+        />
+        {{#if this.isSubmitDisable}}
+            <button class="submit-btn" disabled={{true}} style='opacity: 0.5'>Submit</button>
+        {{else}}
+            <button class="submit-btn" {{on 'click' (fn this.handleFormSubmit)}}>Submit</button>
+         {{/if}}
     </form>
 </div>
 

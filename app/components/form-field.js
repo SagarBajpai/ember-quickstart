@@ -11,6 +11,6 @@ export default class PeopleListComponent extends Component {
     if (validation) {
       validation(val);
     }
-    onChange(id, val);
+    onChange(id, val, validation);
   }
 }
