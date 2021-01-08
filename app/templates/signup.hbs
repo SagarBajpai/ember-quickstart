@@ -1,7 +1,7 @@
 <div id="signup">
     <form class="form">
         <h2 class="title">Account Details</h2>
-        <FormField
+        <Signup::FormField
             @id='firstName' 
             @label= 'First Name'
             @for = 'fname'
@@ -11,7 +11,7 @@
             @showError = {{this.formErrors.firstName}}
             @errorMsg = 'Field cannot be empty'
         />
-        <FormField
+        <Signup::FormField
             @id='lastName' 
             @label= 'Last Name'
             @for = 'lname'
@@ -21,7 +21,7 @@
             @showError = {{this.formErrors.lastName}}
             @errorMsg = 'Field cannot be empty'
         />
-        <FormField
+        <Signup::FormField
             @id='username' 
             @label= 'Choose a username:'
             @for = 'username'
@@ -31,7 +31,7 @@
             @showError = {{this.formErrors.username}}
             @errorMsg = 'Field cannot be empty'
         />
-         <FormField
+        <Signup::FormField
             @id='email' 
             @label= 'Email'
             @for = 'email'
@@ -42,7 +42,7 @@
             @errorMsg = 'Email is not valid'
             @validation = {{this.validateEmail}}
         />
-        <FormField
+        <Signup::FormField
             @id='phoneNumber' 
             @label= 'Phone Number'
             @for = 'phoneNumber'
@@ -52,7 +52,7 @@
             @showError = {{this.formErrors.phoneNumber}}
             @errorMsg = 'Field cannot be empty'
         />
-        <FormField
+        <Signup::FormField
             @id='experience' 
             @label= 'Experience'
             @for = 'experience'
@@ -62,7 +62,7 @@
             @showError = {{this.formErrors.experience}}
             @errorMsg = 'Field cannot be empty'
         />
-        <FormField
+        <Signup::FormField
             @id='companyName' 
             @label= 'Company Name :'
             @for = 'companyName'
@@ -72,7 +72,7 @@
             @showError = {{this.formErrors.companyName}}
             @errorMsg = 'Field cannot be empty'
         />
-         <FormField
+        <Signup::FormField
             @id='designation' 
             @label= 'Designation :'
             @for = 'designation'
@@ -82,7 +82,7 @@
             @showError = {{this.formErrors.designation}}
             @errorMsg = 'Field cannot be empty'
         />
-        <FormField
+        <Signup::FormField
             @id='github' 
             @label= 'Github :'
             @for = 'github'
@@ -92,7 +92,7 @@
             @showError = {{this.formErrors.github}}
             @errorMsg = 'Field cannot be empty'
         />
-           <FormField
+        <Signup::FormField
             @id='linkedIn' 
             @label= 'LinkedIn :'
             @for = 'linkedIn'
@@ -102,7 +102,7 @@
             @showError = {{this.formErrors.linkedIn}}
             @errorMsg = 'Field cannot be empty'
         />
-        <FormField
+        <Signup::FormField
             @id='twitter' 
             @label= 'Twitter :'
             @for = 'twitter'
@@ -112,7 +112,7 @@
             @showError = {{this.formErrors.twitter}}
             @errorMsg = 'Field cannot be empty'
         />
-        <FormField
+        <Signup::FormField
             @id='website' 
             @label= 'Website :'
             @for = 'website'
